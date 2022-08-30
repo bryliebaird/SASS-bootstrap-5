@@ -1,3 +1,7 @@
+// 1. Import SASS Functions (so you can use them throughout this file)
+@import "../node_modules/bootstrap/scss/functions";
+
+
 // global variables
 $enable-rounded: false;
 $enable-button-pointers: false;
@@ -10,5 +14,16 @@ $primary: #ff3287;
 $secondary: #16be7e;
 $light: #fff9f1;
 
+// 2. Import variables + mixin files (so you can use them below)
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
 
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+.btn-truncate {
+    max-width: 100px;
+    @include text-truncate;
+}
+
+
+// LAST. Import entire bootstrap SASS file, all of the customizing you have done will be compiled into these files
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
