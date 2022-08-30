@@ -5,4 +5,10 @@ $enable-negative-margins: true;  //giving us access to negative margins
 $enable-smooth-scroll: false;
 
 
+// theme colors
+$primary: #ff3287;
+$secondary: #16be7e;
+$light: #fff9f1;
+
+
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
