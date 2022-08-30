@@ -1,8 +1,8 @@
 // global variables
 $enable-rounded: false;
 $enable-button-pointers: false;
-
-
+$enable-negative-margins: true;  //giving us access to negative margins
+$enable-smooth-scroll: false;
 
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
