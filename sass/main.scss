@@ -1,3 +1,6 @@
+// Google Fonts Import 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 // 1. Import SASS Functions (so you can use them throughout this file)
 @import "../node_modules/bootstrap/scss/functions";
 
@@ -9,10 +12,20 @@ $enable-negative-margins: true;  //giving us access to negative margins
 $enable-smooth-scroll: false;
 
 
-// theme colors
+// custom theme colors
 $primary: #ff3287;
 $secondary: #16be7e;
 $light: #fff9f1;
+
+// custom base font family
+$font-family-base: "Montserrat";
+
+// custom font and heading sizes/spacing
+$font-size-base: 1rem;
+$lead-font-size: $font-size-base * 1.5;  // must include font-size-base above to change lead size
+$headings-font-weight: 300;
+$headings-line-height: 1.5;
+$h1-font-size: $font-size-base * 2.75;
 
 // 2. Import variables + mixin files (so you can use them below)
 @import "../node_modules/bootstrap/scss/variables";
