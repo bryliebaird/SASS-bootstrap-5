@@ -25,5 +25,45 @@ $light: #fff9f1;
 }
 
 
+$custom-colors: (
+    "primary-light": #fff8fb,
+    "secondary-light": #f6fffb
+);
+
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+// remove theme color from theme-color map
+$theme-colors: map-remove($theme-colors, "danger");
+
+
+// create classes for color palette 
+
+@each $color, $val in $colors {
+    .bg-#{$color}{
+        background-color: $val
+    }
+    .bg-#{$color}-light {
+        background-color: tint-color($val, 80%)
+    }
+    .bg-#{$color}-dark{
+        background-color: shade-color($val, 30%)
+    }
+
+    .text-#{$color}{
+        color: $val
+    }
+    .text-#{$color}-light {
+        color: tint-color($val, 80%)
+    }
+    .text-#{$color}-dark{
+        color: shade-color($val, 30%)
+    }
+}
+
+
+
+
 // LAST. Import entire bootstrap SASS file, all of the customizing you have done will be compiled into these files
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
