@@ -75,6 +75,11 @@ $theme-colors: map-remove($theme-colors, "danger");
     }
 }
 
+$custom-display-font-sizes: (
+    7: 2rem,
+);
+
+$display-font-sizes: map-merge($custom-display-font-sizes, $display-font-sizes);
 
 
 
