@@ -153,7 +153,28 @@ $custom-utilities: (
     )
   ),
 );
+
 $utilities: map-merge($utilities, $custom-utilities);
+
+
+// modifying utilities
+$modified-utilities: (
+  "border-bottom": (
+    property: border-bottom,
+    values: (
+      null: $border-width dashed $border-color,
+      0: 0,
+    )
+  ),
+  // change one key/value pair using map-get function
+  "display": map-merge(
+    map-get($utilities, "display"),
+    ( class: dis ),
+  ),
+);
+
+$utilities: map-merge($utilities, $modified-utilities);
+
 
 // import bootstrap whole sass lib (incorporates all above redefined vars & values)
 @import "../node_modules/bootstrap/scss/bootstrap";
