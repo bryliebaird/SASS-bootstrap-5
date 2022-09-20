@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/bryliebaird/SASS-bootstrap-5#readme",
   "dependencies": {
-    "bootstrap": "^5.2.0"
+    "bootstrap": "^5.2.1"
   }
 }
